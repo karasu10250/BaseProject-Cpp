@@ -134,7 +134,7 @@ public class print_SumClass {
 		System.out.println("==========測驗結果==========");
 		printEach(score);
 		totalSum(score);
-		System.out.print(Print);
+		System.out.print(toString());
 		
 		System.out.println("============建議============");
 		compare();
