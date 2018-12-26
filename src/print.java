@@ -19,7 +19,7 @@ public class print {
 		score[8] = 60;
 		
 
-		Print.print(socre);
+		Print.print(score);
 		
 	}
 
