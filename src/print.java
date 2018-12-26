@@ -5,7 +5,7 @@ public class print {
 		
 		
 		
-		float[] score = new float[9];
+		double[] score = new double[9];
 		print_SumClass Print = new print_SumClass();
 		
 		score[0] = 60;
