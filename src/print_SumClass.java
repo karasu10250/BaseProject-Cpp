@@ -1,37 +1,49 @@
+/* 
+ * 	½Òµ{¦WºÙ:	³nÅé¤uµ{¾É½×
+ * 	±Â½Ò¦Ñ®v:	³\Ãh¤¤ ³Õ¤h
+ * 	¤p²Õ²Õ¦W:	³n¤u«D³n¤u
+ *	±MÃD¦WºÙ:	¤ß²z¤ÀªR¤j®v
+ *	¥\¯à¦WºÙ:	³]¸m°Q½×
+ *	¾Ç¥Í¾Ç¸¹:	D0650028
+ *	¾Ç¥Í©m¦W:	´¿°¶µ¾
+ *
+ *	³Ì«á­×§ï¤é´Á:	2018.12.27
+ */
+package function;
 
 public class print_SumClass {
 	
-	private float sum1;
-	private float sum2;
-	private float sum3;
+	private double sum1;
+	private double sum2;
+	private double sum3;
 	
-	public print_SumClass()
-	{
+	public print_SumClass(){
+		
 		sum1 = 0;
 		sum2 = 0;
 		sum3 = 0;
 	}
 	
 	
-	public float getSum1() {
+	public double getSum1() {
 		return sum1;
 	}
 	
-	public void setSum1(float sum1) {
+	public void setSum1(double sum1) {
 		this.sum1 = sum1;
 	}
 
 	
-	public float getSum2() {
+	public double getSum2() {
 		return sum2;
 	}
 
-	public void setSum2(float sum2) {
+	public void setSum2(double sum2) {
 		this.sum2 = sum2;
 	}
 
 	
-	public float getSum3() {
+	public double getSum3() {
 		return sum3;
 	}
 
@@ -41,80 +53,96 @@ public class print_SumClass {
 
     
 	
-	public void totalSum(float[] score)
-	{
+	public void totalSum(double[] score){
+		
 		sum1 = score[8] + score[0] + score[1];
 		sum2 = score[2] + score[3] + score[4];
 		sum3 = score[5] + score[6] + score[7];
 	}
 	
-	public void printEach(float[] score)
-	{
+	public void printEach(double[] score){
+		
 		System.out.printf(String.format("%8s","I : ") + score[1] + String.format("%8s"," II : ") + score[2] + String.format("%8s"," III : ") + score[3] + "\n");
 		System.out.printf(String.format("%8s","IV : ") + score[4] + String.format("%8s"," V : ") + score[5] + String.format("%8s"," VI : ") + score[6] + "\n");
 		System.out.printf(String.format("%8s","VII : ") + score[7] + String.format("%8s"," VIII : ") + score[8] + String.format("%8s"," IX : ") + score[0] + "\n");
 	}
 	
 	
-	public void compare()
-	{
-		if(sum1 > sum2 && sum1 > sum3)
-		{
-			System.out.println("æ‚¨å±¬æ–¼æ€è€ƒä¸»å°å‹ï¼Œæ„›å¥½çŸ¥è­˜ä¸”å–œæ„›æ‡·ç–‘äº‹ç‰©ä¸¦é€éæ€è€ƒè§£æ±ºå•é¡Œï¼Œä½†å¿…é ˆæ³¨æ„");
-			System.out.println("ä¸èƒ½å¤ªéæ–¼ç†æ€§è€Œå¤±å»æ„Ÿæ€§ï¼Œæ‡·ç–‘äº‹ç‰©ä¹Ÿé ˆé©ç•¶ï¼Œå¦å‰‡åœ¨äº¤éš›ä¸Šå¯èƒ½æœƒæœ‰å›°é›£ã€‚");
+	public int compare(){
+		
+		if(sum1 > sum2 && sum1 > sum3){
+			
+			System.out.println("±zÄİ©ó«ä¦Ò¥D¾É«¬¡A·R¦nª¾ÃÑ¥B³ß·RÃhºÃ¨Æª«¨Ã³z¹L«ä¦Ò¸Ñ¨M°İÃD¡A¦ı¥²¶·ª`·N");
+			System.out.println("¤£¯à¤Ó¹L©ó²z©Ê¦Ó¥¢¥h·P©Ê¡AÃhºÃ¨Æª«¤]¶·¾A·í¡A§_«h¦b¥æ»Ú¤W¥i¯à·|¦³§xÃø¡C");
+			
+			return 1;
 		}
-		else if(sum2 > sum1 && sum2 > sum3)
-		{
-			System.out.println("æ‚¨å±¬æ–¼æ„Ÿæƒ…ä¸»å°å‹ï¼Œå–œæ„›çµ¦äºˆã€æ„›å¥½æˆå°±ï¼Œä»¥æ„Ÿæƒ…ç‚ºé©…å‹•åŠ›ï¼Œä»¥å¿ƒç‚ºä¸­å¿ƒï¼Œä½†å¿…");
-			System.out.println("é ˆæ³¨æ„ä¸èƒ½å¤ªéæ„Ÿæƒ…ç”¨äº‹ï¼Œä¸ç†æ€§çš„è™•äº‹å¾€å¾€æœƒå¤±å»æ˜¯éåƒ¹å€¼åˆ¤æ–·çš„èƒ½åŠ›ã€‚");
+		else if(sum2 > sum1 && sum2 > sum3){
+			
+			System.out.println("±zÄİ©ó·P±¡¥D¾É«¬¡A³ß·Rµ¹¤©¡B·R¦n¦¨´N¡A¥H·P±¡¬°ÅX°Ê¤O¡A¥H¤ß¬°¤¤¤ß¡A¦ı¥²");
+			System.out.println("¶·ª`·N¤£¯à¤Ó¹L·P±¡¥Î¨Æ¡A¤£²z©Êªº³B¨Æ©¹©¹·|¥¢¥h¬O«D»ù­È§PÂ_ªº¯à¤O¡C");
+			
+			return 2;
 		}
-		else if(sum3 > sum1 && sum3 > sum2)
-		{
-			System.out.println("æ‚¨å±¬æ–¼è¡Œå‹•ä¸»å°å‹ï¼Œæ„›å¥½åŠ›é‡ã€æ¨™æº–ï¼Œè¡Œäº‹å–œæ­¡ä»¥è‡ªå·±çš„ç¶“é©—ç‚ºé©…å‹•åŠ›ï¼Œä½†å¿…é ˆ");
-			System.out.println("æ³¨æ„ï¼Œåœ¨è¡Œå‹•ä¸Šæœ‰æ™‚éå¾€çš„ç¶“é©—ä¸ä¸€å®šé©ç”¨æ–¼ç¾åœ¨çš„æƒ…æ³ï¼Œè¦é©æ™‚åšå‡ºæ‡‰è®Šï¼Œä»¥");
-			System.out.println("é¿å…é€ æˆä¸ç†æƒ³çš„çµæœã€‚");
+		else if(sum3 > sum1 && sum3 > sum2){
+			
+			System.out.println("±zÄİ©ó¦æ°Ê¥D¾É«¬¡A·R¦n¤O¶q¡B¼Ğ·Ç¡A¦æ¨Æ³ßÅw¥H¦Û¤vªº¸gÅç¬°ÅX°Ê¤O¡A¦ı¥²¶·");
+			System.out.println("ª`·N¡A¦b¦æ°Ê¤W¦³®É¹L©¹ªº¸gÅç¤£¤@©w¾A¥Î©ó²{¦bªº±¡ªp¡A­n¾A®É°µ¥XÀ³ÅÜ¡A¥H");
+			System.out.println("Á×§K³y¦¨¤£²z·Qªºµ²ªG¡C");
+			
+			return 3;
 		}
-		else if(sum1 == sum2 && sum1 != sum3)
-		{
-			System.out.println("æ‚¨åŒæ™‚æ“æœ‰å¤šç¨®å±¬æ€§");
-			System.out.println("æ‚¨å±¬æ–¼æ€è€ƒä¸»å°å‹ï¼Œæ„›å¥½çŸ¥è­˜ä¸”å–œæ„›æ‡·ç–‘äº‹ç‰©ä¸¦é€éæ€è€ƒè§£æ±ºå•é¡Œï¼Œä½†å¿…é ˆæ³¨æ„");
-			System.out.println("ä¸èƒ½å¤ªéæ–¼ç†æ€§è€Œå¤±å»æ„Ÿæ€§ï¼Œæ‡·ç–‘äº‹ç‰©ä¹Ÿé ˆé©ç•¶ï¼Œå¦å‰‡åœ¨äº¤éš›ä¸Šå¯èƒ½æœƒæœ‰å›°é›£ã€‚");
+		else if(sum1 == sum2 && sum1 != sum3){
+			
+			System.out.println("±z¦P®É¾Ö¦³¦hºØÄİ©Ê");
+			System.out.println("±zÄİ©ó«ä¦Ò¥D¾É«¬¡A·R¦nª¾ÃÑ¥B³ß·RÃhºÃ¨Æª«¨Ã³z¹L«ä¦Ò¸Ñ¨M°İÃD¡A¦ı¥²¶·ª`·N");
+			System.out.println("¤£¯à¤Ó¹L©ó²z©Ê¦Ó¥¢¥h·P©Ê¡AÃhºÃ¨Æª«¤]¶·¾A·í¡A§_«h¦b¥æ»Ú¤W¥i¯à·|¦³§xÃø¡C");
 			System.out.println("------------------------");
-			System.out.println("æ‚¨å±¬æ–¼æ„Ÿæƒ…ä¸»å°å‹ï¼Œå–œæ„›çµ¦äºˆã€æ„›å¥½æˆå°±ï¼Œä»¥æ„Ÿæƒ…ç‚ºé©…å‹•åŠ›ï¼Œä»¥å¿ƒç‚ºä¸­å¿ƒï¼Œä½†å¿…");
-			System.out.println("é ˆæ³¨æ„ä¸èƒ½å¤ªéæ„Ÿæƒ…ç”¨äº‹ï¼Œä¸ç†æ€§çš„è™•äº‹å¾€å¾€æœƒå¤±å»æ˜¯éåƒ¹å€¼åˆ¤æ–·çš„èƒ½åŠ›ã€‚");
+			System.out.println("±zÄİ©ó·P±¡¥D¾É«¬¡A³ß·Rµ¹¤©¡B·R¦n¦¨´N¡A¥H·P±¡¬°ÅX°Ê¤O¡A¥H¤ß¬°¤¤¤ß¡A¦ı¥²");
+			System.out.println("¶·ª`·N¤£¯à¤Ó¹L·P±¡¥Î¨Æ¡A¤£²z©Êªº³B¨Æ©¹©¹·|¥¢¥h¬O«D»ù­È§PÂ_ªº¯à¤O¡C");
+			
+			return 4;
 		}
-		else if(sum1 == sum3 && sum1 != sum2)
-		{
-			System.out.println("æ‚¨åŒæ™‚æ“æœ‰å¤šç¨®å±¬æ€§");
-			System.out.println("æ‚¨å±¬æ–¼æ€è€ƒä¸»å°å‹ï¼Œæ„›å¥½çŸ¥è­˜ä¸”å–œæ„›æ‡·ç–‘äº‹ç‰©ä¸¦é€éæ€è€ƒè§£æ±ºå•é¡Œï¼Œä½†å¿…é ˆæ³¨æ„");
-			System.out.println("ä¸èƒ½å¤ªéæ–¼ç†æ€§è€Œå¤±å»æ„Ÿæ€§ï¼Œæ‡·ç–‘äº‹ç‰©ä¹Ÿé ˆé©ç•¶ï¼Œå¦å‰‡åœ¨äº¤éš›ä¸Šå¯èƒ½æœƒæœ‰å›°é›£ã€‚");
+		else if(sum1 == sum3 && sum1 != sum2){
+			
+			System.out.println("±z¦P®É¾Ö¦³¦hºØÄİ©Ê");
+			System.out.println("±zÄİ©ó«ä¦Ò¥D¾É«¬¡A·R¦nª¾ÃÑ¥B³ß·RÃhºÃ¨Æª«¨Ã³z¹L«ä¦Ò¸Ñ¨M°İÃD¡A¦ı¥²¶·ª`·N");
+			System.out.println("¤£¯à¤Ó¹L©ó²z©Ê¦Ó¥¢¥h·P©Ê¡AÃhºÃ¨Æª«¤]¶·¾A·í¡A§_«h¦b¥æ»Ú¤W¥i¯à·|¦³§xÃø¡C");
 			System.out.println("------------------------");
-			System.out.println("æ‚¨å±¬æ–¼è¡Œå‹•ä¸»å°å‹ï¼Œæ„›å¥½åŠ›é‡ã€æ¨™æº–ï¼Œè¡Œäº‹å–œæ­¡ä»¥è‡ªå·±çš„ç¶“é©—ç‚ºé©…å‹•åŠ›ï¼Œä½†å¿…é ˆ");
-			System.out.println("æ³¨æ„ï¼Œåœ¨è¡Œå‹•ä¸Šæœ‰æ™‚éå¾€çš„ç¶“é©—ä¸ä¸€å®šé©ç”¨æ–¼ç¾åœ¨çš„æƒ…æ³ï¼Œè¦é©æ™‚åšå‡ºæ‡‰è®Šï¼Œä»¥");
-			System.out.println("é¿å…é€ æˆä¸ç†æƒ³çš„çµæœã€‚");
+			System.out.println("±zÄİ©ó¦æ°Ê¥D¾É«¬¡A·R¦n¤O¶q¡B¼Ğ·Ç¡A¦æ¨Æ³ßÅw¥H¦Û¤vªº¸gÅç¬°ÅX°Ê¤O¡A¦ı¥²¶·");
+			System.out.println("ª`·N¡A¦b¦æ°Ê¤W¦³®É¹L©¹ªº¸gÅç¤£¤@©w¾A¥Î©ó²{¦bªº±¡ªp¡A­n¾A®É°µ¥XÀ³ÅÜ¡A¥H");
+			System.out.println("Á×§K³y¦¨¤£²z·Qªºµ²ªG¡C");
+			
+			return 5;
 		}
-		else if(sum2 == sum3 && sum2 != sum1)
-		{
-			System.out.println("æ‚¨åŒæ™‚æ“æœ‰å¤šç¨®å±¬æ€§");
-			System.out.println("æ‚¨å±¬æ–¼æ„Ÿæƒ…ä¸»å°å‹ï¼Œå–œæ„›çµ¦äºˆã€æ„›å¥½æˆå°±ï¼Œä»¥æ„Ÿæƒ…ç‚ºé©…å‹•åŠ›ï¼Œä»¥å¿ƒç‚ºä¸­å¿ƒï¼Œä½†å¿…");
-			System.out.println("é ˆæ³¨æ„ä¸èƒ½å¤ªéæ„Ÿæƒ…ç”¨äº‹ï¼Œä¸ç†æ€§çš„è™•äº‹å¾€å¾€æœƒå¤±å»æ˜¯éåƒ¹å€¼åˆ¤æ–·çš„èƒ½åŠ›ã€‚");
+		else if(sum2 == sum3 && sum2 != sum1){
+			
+			System.out.println("±z¦P®É¾Ö¦³¦hºØÄİ©Ê");
+			System.out.println("±zÄİ©ó·P±¡¥D¾É«¬¡A³ß·Rµ¹¤©¡B·R¦n¦¨´N¡A¥H·P±¡¬°ÅX°Ê¤O¡A¥H¤ß¬°¤¤¤ß¡A¦ı¥²");
+			System.out.println("¶·ª`·N¤£¯à¤Ó¹L·P±¡¥Î¨Æ¡A¤£²z©Êªº³B¨Æ©¹©¹·|¥¢¥h¬O«D»ù­È§PÂ_ªº¯à¤O¡C");
 			System.out.println("------------------------");
-			System.out.println("æ‚¨å±¬æ–¼è¡Œå‹•ä¸»å°å‹ï¼Œæ„›å¥½åŠ›é‡ã€æ¨™æº–ï¼Œè¡Œäº‹å–œæ­¡ä»¥è‡ªå·±çš„ç¶“é©—ç‚ºé©…å‹•åŠ›ï¼Œä½†å¿…é ˆ");
-			System.out.println("æ³¨æ„ï¼Œåœ¨è¡Œå‹•ä¸Šæœ‰æ™‚éå¾€çš„ç¶“é©—ä¸ä¸€å®šé©ç”¨æ–¼ç¾åœ¨çš„æƒ…æ³ï¼Œè¦é©æ™‚åšå‡ºæ‡‰è®Šï¼Œä»¥");
-			System.out.println("é¿å…é€ æˆä¸ç†æƒ³çš„çµæœã€‚");
+			System.out.println("±zÄİ©ó¦æ°Ê¥D¾É«¬¡A·R¦n¤O¶q¡B¼Ğ·Ç¡A¦æ¨Æ³ßÅw¥H¦Û¤vªº¸gÅç¬°ÅX°Ê¤O¡A¦ı¥²¶·");
+			System.out.println("ª`·N¡A¦b¦æ°Ê¤W¦³®É¹L©¹ªº¸gÅç¤£¤@©w¾A¥Î©ó²{¦bªº±¡ªp¡A­n¾A®É°µ¥XÀ³ÅÜ¡A¥H");
+			System.out.println("Á×§K³y¦¨¤£²z·Qªºµ²ªG¡C");
+			
+			return 6;
 		}
-		else if(sum1 == sum2 && sum2 == sum3)
-		{
-			System.out.println("æ‚¨åŒæ™‚æ“æœ‰å¤šç¨®å±¬æ€§");
-			System.out.println("æ‚¨å±¬æ–¼æ€è€ƒä¸»å°å‹ï¼Œæ„›å¥½çŸ¥è­˜ä¸”å–œæ„›æ‡·ç–‘äº‹ç‰©ä¸¦é€éæ€è€ƒè§£æ±ºå•é¡Œï¼Œä½†å¿…é ˆæ³¨æ„");
-			System.out.println("ä¸èƒ½å¤ªéæ–¼ç†æ€§è€Œå¤±å»æ„Ÿæ€§ï¼Œæ‡·ç–‘äº‹ç‰©ä¹Ÿé ˆé©ç•¶ï¼Œå¦å‰‡åœ¨äº¤éš›ä¸Šå¯èƒ½æœƒæœ‰å›°é›£ã€‚");
+		else if(sum1 == sum2 && sum2 == sum3){
+			
+			System.out.println("±z¦P®É¾Ö¦³¦hºØÄİ©Ê");
+			System.out.println("±zÄİ©ó«ä¦Ò¥D¾É«¬¡A·R¦nª¾ÃÑ¥B³ß·RÃhºÃ¨Æª«¨Ã³z¹L«ä¦Ò¸Ñ¨M°İÃD¡A¦ı¥²¶·ª`·N");
+			System.out.println("¤£¯à¤Ó¹L©ó²z©Ê¦Ó¥¢¥h·P©Ê¡AÃhºÃ¨Æª«¤]¶·¾A·í¡A§_«h¦b¥æ»Ú¤W¥i¯à·|¦³§xÃø¡C");
 			System.out.println("------------------------");
-			System.out.println("æ‚¨å±¬æ–¼æ„Ÿæƒ…ä¸»å°å‹ï¼Œå–œæ„›çµ¦äºˆã€æ„›å¥½æˆå°±ï¼Œä»¥æ„Ÿæƒ…ç‚ºé©…å‹•åŠ›ï¼Œä»¥å¿ƒç‚ºä¸­å¿ƒï¼Œä½†å¿…");
-			System.out.println("é ˆæ³¨æ„ä¸èƒ½å¤ªéæ„Ÿæƒ…ç”¨äº‹ï¼Œä¸ç†æ€§çš„è™•äº‹å¾€å¾€æœƒå¤±å»æ˜¯éåƒ¹å€¼åˆ¤æ–·çš„èƒ½åŠ›ã€‚");
+			System.out.println("±zÄİ©ó·P±¡¥D¾É«¬¡A³ß·Rµ¹¤©¡B·R¦n¦¨´N¡A¥H·P±¡¬°ÅX°Ê¤O¡A¥H¤ß¬°¤¤¤ß¡A¦ı¥²");
+			System.out.println("¶·ª`·N¤£¯à¤Ó¹L·P±¡¥Î¨Æ¡A¤£²z©Êªº³B¨Æ©¹©¹·|¥¢¥h¬O«D»ù­È§PÂ_ªº¯à¤O¡C");
 			System.out.println("------------------------");
-			System.out.println("æ‚¨å±¬æ–¼è¡Œå‹•ä¸»å°å‹ï¼Œæ„›å¥½åŠ›é‡ã€æ¨™æº–ï¼Œè¡Œäº‹å–œæ­¡ä»¥è‡ªå·±çš„ç¶“é©—ç‚ºé©…å‹•åŠ›ï¼Œä½†å¿…é ˆ");
-			System.out.println("æ³¨æ„ï¼Œåœ¨è¡Œå‹•ä¸Šæœ‰æ™‚éå¾€çš„ç¶“é©—ä¸ä¸€å®šé©ç”¨æ–¼ç¾åœ¨çš„æƒ…æ³ï¼Œè¦é©æ™‚åšå‡ºæ‡‰è®Šï¼Œä»¥");
-			System.out.println("é¿å…é€ æˆä¸ç†æƒ³çš„çµæœã€‚");
+			System.out.println("±zÄİ©ó¦æ°Ê¥D¾É«¬¡A·R¦n¤O¶q¡B¼Ğ·Ç¡A¦æ¨Æ³ßÅw¥H¦Û¤vªº¸gÅç¬°ÅX°Ê¤O¡A¦ı¥²¶·");
+			System.out.println("ª`·N¡A¦b¦æ°Ê¤W¦³®É¹L©¹ªº¸gÅç¤£¤@©w¾A¥Î©ó²{¦bªº±¡ªp¡A­n¾A®É°µ¥XÀ³ÅÜ¡A¥H");
+			System.out.println("Á×§K³y¦¨¤£²z·Qªºµ²ªG¡C");
+			
+			return 7;
+		}else {
+			return 0;
 		}
 	}
 	
@@ -123,34 +151,31 @@ public class print_SumClass {
 	
 	public String toString()
 	{
-		return "ç¬¬ä¸€å€ï¼ˆVII.IX.Iï¼‰" + String.format("%10s","ç¸½åˆ† : ") + sum1 + "  (è¡Œå‹•ä¸»å°)\n" +
-			   "ç¬¬äºŒå€ï¼ˆII.III.IVï¼‰" + String.format("%6s","ç¸½åˆ† : ") + sum2 + "  (æ„Ÿæƒ…ä¸»å°)\n" +
-			   "ç¬¬äºŒå€ï¼ˆV.VI.VIIï¼‰" + String.format("%10s","ç¸½åˆ† : ") + sum3 + "  (æ€è€ƒä¸»å°)\n";
+		return "²Ä¤@°Ï¡]VII.IX.I¡^" + String.format("%10s","Á`¤À : ") + sum1 + "  (¦æ°Ê¥D¾É)\n" +
+			   "²Ä¤G°Ï¡]II.III.IV¡^" + String.format("%6s","Á`¤À : ") + sum2 + "  (·P±¡¥D¾É)\n" +
+			   "²Ä¤G°Ï¡]V.VI.VII¡^" + String.format("%10s","Á`¤À : ") + sum3 + "  («ä¦Ò¥D¾É)\n";
 	}
 	
-	
-	public void print(float[] score)
-	{
-		System.out.println("==========æ¸¬é©—çµæœ==========");
+	public void print(double[] score) {
+		System.out.println("==========´úÅçµ²ªG==========");
 		printEach(score);
 		totalSum(score);
 		System.out.print(toString());
 		
-		System.out.println("============å»ºè­°============");
+		System.out.println("============«ØÄ³============");
 		compare();
 		
-		System.out.println("==========è©•åˆ†ä¾æ“š==========");
+		System.out.println("==========µû¤À¨Ì¾Ú==========");
 		
 
-		System.out.println("[æ€§åˆ¥ ]\r\n" + "ä¸å…·æ„ç¾©\r\n" + "[æ€§å‘ ]\r\n" + "ä¸å…·æ„ç¾©\r\n" + "[è¡€å‹ ]\r\n" + "A(æ´»æ½‘ ) II.IV");
-		System.out.println("B(å®‰éœ ) I.VIII\r\n" + "AB(èˆˆå¥® ) IV.V.VI.IX\r\n" + "O(æŠ‘é¬± ) III.VII");
-		System.out.println("[æ˜Ÿåº§ ]\r\n" + "I : å¤©è  .ç…å­\r\n" + "II : æ°´ç“¶ .å¤©ç§¤\r\n" + "III : é›™å­\r\n" + "IV : è™•å¥³");
-		System.out.println("V : é­”ç¾¯\r\n" + "VI : å·¨èŸ¹.é›™é­š\r\n" + "VII : ç‰¡ç¾Š\r\n" + "VIII : é‡‘ç‰›\r\n" + "XI : å°„æ‰‹");
+		System.out.println("[©Ê§O ]\r\n" + "¤£¨ã·N¸q\r\n" + "[©Ê¦V ]\r\n" + "¤£¨ã·N¸q\r\n" + "[¦å«¬ ]\r\n" + "A(¬¡¼â ) II.IV");
+		System.out.println("B(¦wÀR ) I.VIII\r\n" + "AB(¿³¾Ä ) IV.V.VI.IX\r\n" + "O(§íÆ{ ) III.VII");
+		System.out.println("[¬P®y ]\r\n" + "I : ¤ÑÃÈ .·à¤l\r\n" + "II : ¤ô²~ .¤Ñ¯¯\r\n" + "III : Âù¤l\r\n" + "IV : ³B¤k");
+		System.out.println("V : Å]½~\r\n" + "VI : ¥¨ÃÉ.Âù³½\r\n" + "VII : ¨d¦Ï\r\n" + "VIII : ª÷¤û\r\n" + "XI : ®g¤â");
 		System.out.println("------------------------");
-		System.out.println("VIII.IX.I åŒå€");
-		System.out.println("II.III.IV åŒå€");
-		System.out.println("V.VI.VII  åŒå€");
+		System.out.println("VIII.IX.I ¦P°Ï");
+		System.out.println("II.III.IV ¦P°Ï");
+		System.out.println("V.VI.VII  ¦P°Ï");
 	}
-	
 	
 }
